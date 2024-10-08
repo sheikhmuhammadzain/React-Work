@@ -3,8 +3,10 @@ import Components from './assets/components.png'
 import Config from './assets/config.png'
 import JsxUi from './assets/jsx-ui.png'
 import State from './assets/state-mgmt.png'
+import { CORE_CONCEPTS } from "./data";
 function App() {
 
+console.log(CORE_CONCEPTS);
 
   return (
     <div>
@@ -23,7 +25,7 @@ function App() {
         <section id="core-concepts">
           <h2>Core Conceptes 2</h2>
           <ul>
-            <CoreConept img={Components} title="zain" desc='this is the description of the function' />
+            <CoreConept img={Components} title="zain afzal" desc='this is the description of the function' />
             <CoreConept img={State} title="Arham" desc='this is the description of second'  />
             <CoreConept img={JsxUi} title="ali" desc='this is the description of the third function'  />
             <CoreConept img={Config} title="Suleman" desc='this is the description of the 4th function'  />
