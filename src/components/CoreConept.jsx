@@ -3,9 +3,9 @@ const CoreConept = (props) => {
   return (
 
     <li>
-      <img src={props.img} alt="" />
+      <img src={props.image} alt="" />
       <h3>{props.title}</h3>
-      <p>{props.desc}</p>
+      <p>{props.description}</p>
     </li>
   );
 };

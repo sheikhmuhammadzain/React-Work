@@ -1,8 +1,4 @@
 import CoreConept from "./components/CoreConept";
-import Components from './assets/components.png'
-import Config from './assets/config.png'
-import JsxUi from './assets/jsx-ui.png'
-import State from './assets/state-mgmt.png'
 import { CORE_CONCEPTS } from "./data";
 function App() {
 
@@ -25,10 +21,16 @@ console.log(CORE_CONCEPTS);
         <section id="core-concepts">
           <h2>Core Conceptes 2</h2>
           <ul>
-            <CoreConept img={Components} title="zain afzal" desc='this is the description of the function' />
-            <CoreConept img={State} title="Arham" desc='this is the description of second'  />
-            <CoreConept img={JsxUi} title="ali" desc='this is the description of the third function'  />
-            <CoreConept img={Config} title="Suleman" desc='this is the description of the 4th function'  />
+
+
+ {CORE_CONCEPTS.map((core,i)=>
+    //  <CoreConept key={i} img={CORE_CONCEPTS[i].image} title={CORE_CONCEPTS[i].title} desc={CORE_CONCEPTS[i].description} />
+    
+    <CoreConept key={i} {...CORE_CONCEPTS[i]}/>
+
+ )}
+
+          
           </ul>
         </section>
       </main>
