@@ -1,4 +1,5 @@
 import CoreConept from "./components/CoreConept";
+import TabButton from "./components/TabButton";
 import { CORE_CONCEPTS } from "./data";
 function App() {
 
@@ -30,11 +31,27 @@ console.log(CORE_CONCEPTS);
 
  )}
 
-          
           </ul>
         </section>
+        <section id="examples">
+        <h2>Examples</h2>
+        <menu>
+          <TabButton  >
+            <h1>Compnents</h1>
+          </TabButton>
+          <TabButton  >
+            <h1>JSX</h1>
+          </TabButton>
+          <TabButton  >
+            <h1>Props</h1>
+          </TabButton>
+          <TabButton  >
+            <h1>State</h1>
+          </TabButton>
+        </menu>
+      </section>
       </main>
-    </div>
+  </div>
   );
 }
 
