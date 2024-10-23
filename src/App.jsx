@@ -2,9 +2,9 @@ import { useState } from "react";
 import CoreConcept from "./components/CoreConcept";
 import TabButton from "./components/TabButton";
 
-import { CORE_CONCEPTS } from "./data";
+import { CORE_CONCEPTS,EXAMPLES } from "./data";
 function App() {
-const [Data, setData] = useState('')
+const [Data, setData] = useState('components')
 function handleClick (data){
   setData(data)
 }
@@ -58,6 +58,16 @@ console.log(CORE_CONCEPTS);
       </section>
       <h1>This is <button>{Data}</button> from use state hook </h1>
       </main>
+   
+      <div id="tab-content">
+        <h3>{EXAMPLES[Data].title}</h3>
+        <p>{EXAMPLES[Data].description}</p>
+        <pre>
+          <code>
+            {EXAMPLES[Data].code}
+          </code>
+        </pre>
+      </div>
   </div>
   );
 }
