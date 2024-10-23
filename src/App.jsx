@@ -1,10 +1,12 @@
+import { useState } from "react";
 import CoreConcept from "./components/CoreConcept";
 import TabButton from "./components/TabButton";
+
 import { CORE_CONCEPTS } from "./data";
 function App() {
+const [Data, setData] = useState('')
 function handleClick (data){
-  alert(data)
-  
+  setData(data)
 }
 console.log(CORE_CONCEPTS);
 
@@ -40,20 +42,21 @@ console.log(CORE_CONCEPTS);
         <h2>Examples</h2>
         <h1></h1>
         <menu>
-          <TabButton  onSelect={()=>handleClick('helLO')}  >
+          <TabButton  onSelect={()=>handleClick('STATE 1')}  >
            <button>Components</button>
           </TabButton>
-          <TabButton  onSelect={()=>handleClick('BY')} >
-            <h1>JSX</h1>
+          <TabButton  onSelect={()=>handleClick('STATE 2')} >
+            <h1>JSX</h1> 
           </TabButton>
-          <TabButton onSelect={()=>handleClick('hI')}  >
+          <TabButton onSelect={()=>handleClick('STATE 3')}  >
             <h1>Props</h1>
           </TabButton>
-          <TabButton onSelect={()=>handleClick('HANDLE')} >
+          <TabButton onSelect={()=>handleClick('STATE 4')} >
             <h1>State</h1>
           </TabButton>
         </menu>
       </section>
+      <h1>This is <button>{Data}</button> from use state hook </h1>
       </main>
   </div>
   );
