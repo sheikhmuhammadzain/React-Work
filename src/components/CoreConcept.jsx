@@ -1,5 +1,5 @@
 
-const CoreConept = (props) => {
+const CoreConcept = (props) => {
   return (
 
     <li>
@@ -10,4 +10,4 @@ const CoreConept = (props) => {
   );
 };
 
-export default CoreConept;
+export default CoreConcept;

@@ -2,7 +2,7 @@ import React from 'react'
 
 const TabButton = (props) => {
   return (
-    <div>
+    <div onClick={props.onSelect}>
     
     {props.children}
 

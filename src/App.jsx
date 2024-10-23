@@ -1,8 +1,11 @@
-import CoreConept from "./components/CoreConept";
+import CoreConcept from "./components/CoreConcept";
 import TabButton from "./components/TabButton";
 import { CORE_CONCEPTS } from "./data";
 function App() {
-
+function handleClick (){
+  alert('hi')
+  
+}
 console.log(CORE_CONCEPTS);
 
   return (
@@ -20,14 +23,14 @@ console.log(CORE_CONCEPTS);
       </main>
       <main>
         <section id="core-concepts">
-          <h2>Core Conceptes 2</h2>
+          <h2>Core Concepts 2</h2>
           <ul>
 
 
  {CORE_CONCEPTS.map((core,i)=>
-    //  <CoreConept key={i} img={CORE_CONCEPTS[i].image} title={CORE_CONCEPTS[i].title} desc={CORE_CONCEPTS[i].description} />
+    //  <CoreConcept key={i} img={CORE_CONCEPTS[i].image} title={CORE_CONCEPTS[i].title} desc={CORE_CONCEPTS[i].description} />
     
-    <CoreConept key={i} {...CORE_CONCEPTS[i]}/>
+    <CoreConcept key={i} {...CORE_CONCEPTS[i]}/>
 
  )}
 
@@ -35,17 +38,18 @@ console.log(CORE_CONCEPTS);
         </section>
         <section id="examples">
         <h2>Examples</h2>
+        <h1></h1>
         <menu>
-          <TabButton  >
-            <h1>Compnents</h1>
+          <TabButton  onSelect={handleClick}  >
+           <button>Components</button>
           </TabButton>
-          <TabButton  >
+          <TabButton  onSelect={handleClick} >
             <h1>JSX</h1>
           </TabButton>
-          <TabButton  >
+          <TabButton onSelect={handleClick}  >
             <h1>Props</h1>
           </TabButton>
-          <TabButton  >
+          <TabButton onSelect={handleClick} >
             <h1>State</h1>
           </TabButton>
         </menu>
