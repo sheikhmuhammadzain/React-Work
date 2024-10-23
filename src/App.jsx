@@ -42,16 +42,16 @@ console.log(CORE_CONCEPTS);
         <h2>Examples</h2>
         <h1></h1>
         <menu>
-          <TabButton  onSelect={()=>handleClick('STATE 1')}  >
-           <button>Components</button>
+          <TabButton  onSelect={()=>handleClick('components')}  >
+           <h1>Components</h1>
           </TabButton>
-          <TabButton  onSelect={()=>handleClick('STATE 2')} >
+          <TabButton  onSelect={()=>handleClick('jsx')} >
             <h1>JSX</h1> 
           </TabButton>
-          <TabButton onSelect={()=>handleClick('STATE 3')}  >
+          <TabButton onSelect={()=>handleClick('props')}  >
             <h1>Props</h1>
           </TabButton>
-          <TabButton onSelect={()=>handleClick('STATE 4')} >
+          <TabButton onSelect={()=>handleClick('state')} >
             <h1>State</h1>
           </TabButton>
         </menu>
