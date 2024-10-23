@@ -2,8 +2,8 @@ import CoreConcept from "./components/CoreConcept";
 import TabButton from "./components/TabButton";
 import { CORE_CONCEPTS } from "./data";
 function App() {
-function handleClick (){
-  alert('hi')
+function handleClick (data){
+  alert(data)
   
 }
 console.log(CORE_CONCEPTS);
@@ -40,16 +40,16 @@ console.log(CORE_CONCEPTS);
         <h2>Examples</h2>
         <h1></h1>
         <menu>
-          <TabButton  onSelect={handleClick}  >
+          <TabButton  onSelect={()=>handleClick('helLO')}  >
            <button>Components</button>
           </TabButton>
-          <TabButton  onSelect={handleClick} >
+          <TabButton  onSelect={()=>handleClick('BY')} >
             <h1>JSX</h1>
           </TabButton>
-          <TabButton onSelect={handleClick}  >
+          <TabButton onSelect={()=>handleClick('hI')}  >
             <h1>Props</h1>
           </TabButton>
-          <TabButton onSelect={handleClick} >
+          <TabButton onSelect={()=>handleClick('HANDLE')} >
             <h1>State</h1>
           </TabButton>
         </menu>
